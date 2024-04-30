@@ -1,0 +1,18 @@
+import {createRequire} from 'node:module';
+import { vitePlugin as remix } from "@remix-run/dev";
+import { installGlobals } from "@remix-run/node";
+import { defineConfig } from "vite";
+import tsconfigPaths from "vite-tsconfig-paths";
+
+installGlobals();
+
+const require = createRequire(import.meta.url);
+
+export default defineConfig({
+  plugins: [remix(), tsconfigPaths()],
+  resolve: {
+    alias: {
+      crypto: require.resolve('rollup-plugin-node-builtins'),
+    },
+  },
+});
