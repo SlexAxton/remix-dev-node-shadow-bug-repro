@@ -37,7 +37,7 @@ packages/remix-app dev$ remix vite:dev
 
 ## To make it succeed
 
-If you just switch the `other-package` to use the new built in crypto package, instead of the `crypto` npm package, it will also succeed.
+If you just switch the `other-package` to use the new built in crypto package, instead of the `crypto` npm package, it will succeed.
 
 You can do this by deleting the section of the `package.json` that says:
 
