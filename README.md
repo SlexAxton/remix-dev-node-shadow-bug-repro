@@ -2,5 +2,5 @@
 
 ```sh
 pnpm install
-pnpm run dev -w remix-vanilla-extract-app
+pnpm run -r dev
 ```
