@@ -1,5 +1,4 @@
 import type { MetaFunction } from "@remix-run/node";
-import * as style from './index.css';
 
 export const meta: MetaFunction = () => {
   return [
@@ -11,7 +10,7 @@ export const meta: MetaFunction = () => {
 export default function Index() {
   return (
     <div>
-      <h1 className={style.header}>Green header</h1>
+      <h1>Default app</h1>
     </div>
   );
 }
