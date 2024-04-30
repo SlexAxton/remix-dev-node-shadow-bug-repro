@@ -4,6 +4,8 @@ This repo tries to minimally reproduce a bug that causes vite dev mode to fail w
 
 Typically I'd just *not* use the shadowed node builtin, but since it's a deep transient dependency, there's nothing I can do about it. It also seems like it probably implies something else going wrong.
 
+Node version: `20.12.2`
+PNPM version: `9.0.6`
 
 The `remix-app` package in this workspace was created with `npx create-remix@latest`
 The `vite-app` package in this workspace was created with `pnpm create vite`
