@@ -1,11 +1,12 @@
 # PNPM Workspace w vite and node builtin
 
-The `remix-app` package in this workspace was created with `npx create-remix@latest`
-The `vite-app` package in this workspace was created with `pnpm create vite`
-
 This repo tries to minimally reproduce a bug that causes vite dev mode to fail with remix when esbuild comes across a shadowed node builtin in the node_modules folder.
 
 Typically I'd just *not* use the shadowed node builtin, but since it's a deep transient dependency, there's nothing I can do about it. It also seems like it probably implies something else going wrong.
+
+
+The `remix-app` package in this workspace was created with `npx create-remix@latest`
+The `vite-app` package in this workspace was created with `pnpm create vite`
 
 ## Repro steps
 
@@ -45,3 +46,18 @@ You can do this by deleting the section of the `package.json` that says:
     "crypto": "1.0.1"
 },
 ```
+
+## Using just vite succeeds
+
+If we run the vite only app, we don't experience the same output.
+
+```sh
+pnpm install
+pnpm run -r vite-app-dev
+```
+
+# Why might this be happening?
+
+My guess is that it's something in the remix vite configuration that's causing vite to scan the entire node_modules folder rather than just the package it's in.
+
+But honestly no idea.
