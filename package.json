@@ -1,5 +1,5 @@
 {
-  "name": "remix-vanilla-extract-workspace",
+  "name": "vite-dev-node-shadow-repro",
   "private": true,
   "workspaces": [
     "packages/*"

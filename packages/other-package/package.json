@@ -1,19 +1,15 @@
 {
-    "name": "other-app",
-    "private": true,
-    "sideEffects": false,
-    "type": "module",
-    "dependencies": {
-        "crypto": "1.0.1"
-    },
-    "devDependencies": {
-        "esbuild": "^0.20.2"
-    },
-    "scripts": {
-      "other-package": "node index.js",
-      "compile": "esbuild index.js --outfile=index.min.js --minify"
-    },
-    "engines": {
-      "node": ">=20.12.2"
-    }
+  "name": "other-app",
+  "private": true,
+  "sideEffects": false,
+  "type": "module",
+  "dependencies": {
+    "crypto": "1.0.1"
+  },
+  "scripts": {
+    "other-package": "node index.js"
+  },
+  "engines": {
+    "node": ">=20.12.2"
   }
+}
