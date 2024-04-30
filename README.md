@@ -1,4 +1,4 @@
-# PNPM Workspace w vite and node builtin
+# PNPM Workspace with remix and node builtins in independent package
 
 This repo tries to minimally reproduce a bug that causes vite dev mode to fail with remix when esbuild comes across a shadowed node builtin in the node_modules folder.
 
