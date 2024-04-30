@@ -1,6 +1,7 @@
 # PNPM Workspace w vite and node builtin
 
-The `remix-basic-app` package in this workspace was created with `npx create-remix@latest`
+The `remix-app` package in this workspace was created with `npx create-remix@latest`
+The `vite-app` package in this workspace was created with `pnpm create vite`
 
 This repo tries to minimally reproduce a bug that causes vite dev mode to fail with remix when esbuild comes across a shadowed node builtin in the node_modules folder.
 
@@ -10,15 +11,15 @@ Typically I'd just *not* use the shadowed node builtin, but since it's a deep tr
 
 ```sh
 pnpm install
-pnpm run -r remix-basic-dev
+pnpm run -r remix-app-dev
 ```
 
 Will result in:
 
 ```sh
-❯ pnpm run -r remix-basic-dev
+❯ pnpm run -r remix-app-dev
 Scope: 2 of 3 workspace projects
-packages/remix-basic-app dev$ remix vite:dev
+packages/remix-app dev$ remix vite:dev
 [23 lines collapsed]
 │     at Object.buildOrContext (/Users/alex/code/vite-dev-node-shadow-repro/node_modules/.pnpm/es…
 │     at /Users/alex/code/vite-dev-node-shadow-repro/node_modules/.pnpm/esbuild@0.20.2/node_modul…

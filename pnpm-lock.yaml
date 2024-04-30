@@ -14,7 +14,7 @@ importers:
         specifier: 1.0.1
         version: 1.0.1
 
-  packages/remix-basic-app:
+  packages/remix-app:
     dependencies:
       '@remix-run/node':
         specifier: ^2.9.1
@@ -77,6 +77,12 @@ importers:
       vite-tsconfig-paths:
         specifier: ^4.3.2
         version: 4.3.2(typescript@5.4.5)(vite@5.2.10(@types/node@20.12.7))
+
+  packages/vite-app:
+    devDependencies:
+      vite:
+        specifier: ^5.2.10
+        version: 5.2.10(@types/node@20.12.7)
 
 packages:
 

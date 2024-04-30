@@ -1,12 +1,12 @@
 {
-  "name": "remix-basic-app",
+  "name": "remix-app",
   "private": true,
   "sideEffects": false,
   "type": "module",
   "scripts": {
-    "remix-basic-build": "remix vite:build",
-    "remix-basic-dev": "remix vite:dev",
-    "remix-basic-start": "remix-serve ./build/server/index.js"
+    "remix-app-build": "remix vite:build",
+    "remix-app-dev": "remix vite:dev",
+    "remix-app-start": "remix-serve ./build/server/index.js"
   },
   "dependencies": {
     "@remix-run/node": "^2.9.1",
